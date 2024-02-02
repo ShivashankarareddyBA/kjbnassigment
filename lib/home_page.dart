@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
         _progressValue += (updateInterval.inSeconds / _timerDuration);
         if (_progressValue >= 1.0) {
           _progressValue = 0.0;
-          _onFailure(); // Reset timer and consider as failure
+          _onFailure();
         }
       });
     });
@@ -100,7 +100,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              // Widget 1 - Show seconds from current time
               Container(
                 width: 160,
                 height: 160,
@@ -132,12 +131,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const Spacer(),
-
-              // Widget 2 - Show random number between 0 - 59
             ],
           ),
 
-          // Widget 3 - Show success or failure message with score & attempts
           Container(
             width: 380,
             height: 160,
